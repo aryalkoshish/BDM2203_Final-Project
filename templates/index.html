@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div class="login">
+            <h1>7Prediction</h1>
+    <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict_datapoint')}}" method="post">
+               <input type="text" name="payment_value" placeholder="payment_value" required="required" /><br>
+               <input type="text" name="time_to_delivery" placeholder="time_to_delivery" required="required" /><br>
+               <input type="text" name="estimated_vs_actual_shipping" placeholder="estimated_vs_actual_shipping" required="required" /><br>
+               <input type="text" name="late_delivery" placeholder="late_delivery" required="required" /><br>
+               <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        <h2>
+           The FWI prediction is {{result}}
+        </h2>
+       <body>
+    </html>
